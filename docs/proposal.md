@@ -8,7 +8,7 @@ The other option from the main page would be to the Stash Page, where there are 
 Web Service
 -------
 
-[Ravelry API] (https://www.ravelry.com/api)
+[Ravelry API](https://www.ravelry.com/api)
 - POST projects/crafts
 - POST projects/create
 - DELETE projects/delete
