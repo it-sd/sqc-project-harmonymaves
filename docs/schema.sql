@@ -6,11 +6,13 @@ DROP TABLE WHEN EXISTS yarn;
 CREATE TABLE projects (
     id SERIAL PRIMARY KEY,
     title TEXT NOT NULL,
+    pattern_name TEXT NOT NULL,
     date_started DATE,
     date_finished DATE,
     craft TEXT NOT NULL,
     hook_needle TEXT NOT NULL,
-    yarn TEXT NOT NULL
+    yarn TEXT NOT NULL,
+    tags TEXT NOT NULL
 )
 
 CREATE TABLE needles (
