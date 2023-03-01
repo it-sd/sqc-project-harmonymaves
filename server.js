@@ -15,6 +15,9 @@ express()
     res.render('pages/index')
   })
 
+  .get('/index', function (req, res) {
+    res.render('pages/index')
+  })
 // STEP 6
   .get('/about', function (req, res) {
     res.render('pages/about')
@@ -24,3 +27,5 @@ express()
   .get('/health', function (req, res) {
     res.status(200).send('Healthy')
   })
+
+  .listen(PORT, () => console.log(`Listening on ${PORT}`))
