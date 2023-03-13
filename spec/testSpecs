@@ -1,0 +1,27 @@
+describe('StitchCalcultor', function () {
+  let calculator
+
+  beforeEach(function () {
+    calculator = new StitchCalculator()
+  })
+
+  it('should return 0 when given an row count of 0', function () {
+    expect(calculator.calculateItemCount(0)).toEqual(0)
+  })
+
+  it('should return 0 when given an stitch count of 0', function () {
+    expect(calculator.calculateItemCount(0)).toEqual(0)
+  })
+
+  it('should return stitch count when given an a row count of 1', function () {
+    expect(calculator.calculateItemCount(1)).toEqual(1)
+  })
+
+  it('should return row count when given an stitch count of 1', function () {
+    expect(calculator.calculateItemCount(2)).toEqual(2)
+  })
+
+  it('should return number of stitches when given an length and width of item', function () {
+    expect(calculator.calculateItemCount(4)).toEqual(4)
+  })
+})

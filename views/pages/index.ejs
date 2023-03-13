@@ -1,2 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
 <%- include('../partials/header.ejs') _%>
-<p>This is some test text</p>
+</head>
+<h1>How many stitches go into a single project?</h1>
+<p>Every knitting project should use gauge to help a person 
+determine how much yarn they need and what size the project with be.
+But one completely useless statistic is how many stitches you will make
+in any given project.  The calculator on this page uses the number of
+stitches in the gauge swatch to estimate how my stitches will be in
+the finished project.
+</p>
+<div id="calculator-inputs">
+    <label for="title">Gauge Swatch Info</label>
+    
+    <label for="stitches_in_gauge">Number of Stitches Cast on for Gauge Swatch</label>
+    <input type="text" id="gaugeStitches" name="gaugeStitches"><br>
+
+    <label for="rows_in_gauge">Number of Rows in Gauge Swatch</label>
+    <input type="text" id="gaugeRows" name="gaugeRows"><br>
+
+    <label for="gaugeLength">Length of finished Gauge Swatch</label>
+    <input type="text" id="gaugeLength" name="gaugeLength"><br>
+
+    <label for="gaugeWidth">Width of finished Gauge Swatch</label>
+    <input type="text" id="gaugeWidth" name="gaugeWidth"><br>
+
+    <label for="project_final_length">Length of Finished Project</label>
+    <input type="text" id="project_final_length" name="project_final_length"><br>
+
+    <label for="project_final_width">Width of Finished Project</label>
+    <input type="text" id="project_final_width" name="project_final_width"><br>
+
+    <button type="button" id="calc_stitches">Calculate My Stitches!</button>
+</div>
+<script>
+//knit stitches calculator
+
+//inputs:
+// number_of_stitches per row and number_of_rows in gauge swatch
+// dimensions of gauge swatch
+// dimensions of finished project
+const gaugeStitches = document.getElementById("gaugeStitches")
+const gaugeRows = document.getElementById("gaugeRows")
+const gaugeLength = document.getElementById("gaugeLength")
+const gaugeWidth = document.getElementById("gaugeWidth")
+
+const projectLength = document.getElementById("project_final_length")
+const projectWidth = document.getElementById("project_final_width")
+
+//output:
+// GAUGE => number_of_stitches * number of rows = total_number_of_stitches
+
+</script>
+
+</html>
