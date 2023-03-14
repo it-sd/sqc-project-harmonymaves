@@ -51,6 +51,19 @@ const projectWidth = document.getElementById("project_final_width")
 
 //output:
 // GAUGE => number_of_stitches * number of rows = total_number_of_stitches
+function calcRatio() {
+    gaugeArea = gaugeWidth * gaugeLength
+    gaugeStitchNum = gaugeRows * gaugeStitches
+
+    gaugeRatio = gaugeStitchNum / gaugeArea 
+
+    projectArea = projectLength * projectWidth
+
+    projectNumStitches = floor(projectArea * gaugeRatio)
+
+    console.log("There are approximately " + projectNumStitches + "stitches in this completed project.\n That's a lot of knitting, great work!")
+
+}
 
 </script>
 
