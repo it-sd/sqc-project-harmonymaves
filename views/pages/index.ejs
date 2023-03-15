@@ -41,13 +41,13 @@ the finished project.
 // number_of_stitches per row and number_of_rows in gauge swatch
 // dimensions of gauge swatch
 // dimensions of finished project
-const gaugeStitches = Number(document.querySelector('.gaugeStitches'))
-const gaugeRows = Number(document.querySelector('.gaugeRows'))
-const gaugeLength = Number(document.querySelector('.gaugeLength'))
-const gaugeWidth = Number(document.querySelector('.gaugeWidth'))
+const gaugeStitches = parseInt(document.querySelector('.gaugeStitches'))
+const gaugeRows = parseInt(document.querySelector('.gaugeRows'))
+const gaugeLength = parseInt(document.querySelector('.gaugeLength'))
+const gaugeWidth = parseInt(document.querySelector('.gaugeWidth'))
 
-const projectLength = Number(document.querySelector('.project_final_length'))
-const projectWidth = Number(document.querySelector('.project_final_width'))
+const projectLength = parseInt(document.querySelector('.project_final_length'))
+const projectWidth = parseInt(document.querySelector('.project_final_width'))
 
 //output:
 // GAUGE => number_of_stitches * number of rows = total_number_of_stitches
