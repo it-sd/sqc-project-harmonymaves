@@ -41,13 +41,13 @@ the finished project.
 // number_of_stitches per row and number_of_rows in gauge swatch
 // dimensions of gauge swatch
 // dimensions of finished project
-const gaugeStitches = document.getElementById("gaugeStitches")
-const gaugeRows = document.getElementById("gaugeRows")
-const gaugeLength = document.getElementById("gaugeLength")
-const gaugeWidth = document.getElementById("gaugeWidth")
+const gaugeStitches = Number(document.getElementById("gaugeStitches").value)
+const gaugeRows = Number(document.getElementById("gaugeRows").value)
+const gaugeLength = Number(document.getElementById("gaugeLength").value)
+const gaugeWidth = Number(document.getElementById("gaugeWidth").value)
 
-const projectLength = document.getElementById("project_final_length")
-const projectWidth = document.getElementById("project_final_width")
+const projectLength = Number(document.getElementById("project_final_length").value)
+const projectWidth = Number(document.getElementById("project_final_width").value)
 
 //output:
 // GAUGE => number_of_stitches * number of rows = total_number_of_stitches
@@ -59,11 +59,14 @@ function calcRatio() {
 
     projectArea = projectLength * projectWidth
 
-    projectNumStitches = floor(projectArea * gaugeRatio)
+    projectNumStitches = projectArea * gaugeRatio
 
-    console.log("There are approximately " + projectNumStitches + "stitches in this completed project.\n That's a lot of knitting, great work!")
+    console.log("There are approximately " + Number(projectNumStitches) + " stitches in this completed project.\n That's a lot of knitting, great work!")
 
 }
+
+var calcBtn = document.getElementById("calc_stitches")
+calcBtn.addEventListener("click", calcRatio)
 
 </script>
 
