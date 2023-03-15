@@ -41,17 +41,28 @@ the finished project.
 // number_of_stitches per row and number_of_rows in gauge swatch
 // dimensions of gauge swatch
 // dimensions of finished project
-const gaugeStitches = Number(document.querySelector('.gaugeStitches').valueAsNumber)
-const gaugeRows = Number(document.querySelector('.gaugeRows').valueAsNumber)
-const gaugeLength = Number(document.querySelector('.gaugeLength').valueAsNumber)
-const gaugeWidth = Number(document.querySelector('.gaugeWidth').valueAsNumber)
+const gaugeStitches = (document.querySelector('.gaugeStitches'))
+const gaugeRows = (document.querySelector('.gaugeRows'))
+const gaugeLength = (document.querySelector('.gaugeLength'))
+const gaugeWidth = (document.querySelector('.gaugeWidth'))
 
-const projectLength = Number(document.querySelector('.project_final_length').valueAsNumber)
-const projectWidth = Number(document.querySelector('.project_final_width').valueAsNumber)
+const projectLength = (document.querySelector('.project_final_length'))
+const projectWidth = (document.querySelector('.project_final_width'))
 
 //output:
 // GAUGE => number_of_stitches * number of rows = total_number_of_stitches
 function calcRatio() {
+console.log("Gauge Stitches:" + gaugeStitches)
+const number = gaugeStitches.valueAsNumber
+console.log("Gauge Stitches:" + number)
+console.log("Gauge Stitches:" + gaugeStitches)
+console.log("Gauge Rows" + gaugeRows)
+console.log("Gauge Length: " + gaugeLength)
+console.log("Gauge Width: " + gaugeWidth)
+console.log("Project Length: " + projectLength)
+console.log("Project Width: " = projectWidth)
+
+
     let gaugeArea = gaugeWidth * gaugeLength
     let gaugeStitchNum = gaugeRows * gaugeStitches
     console.log("gauge area:" + gaugeArea + "number of gauge stitches: " + gaugeStitchNum)
